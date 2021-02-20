@@ -1,4 +1,4 @@
-#   Nodejs-BiliBili-Watcher
+# Nodejs-BiliBili-Watcher
 
 ##  徽标
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNekokeCore%2FNodejs-BiliBili-Watcher.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNekokeCore%2FNodejs-BiliBili-Watcher?ref=badge_shield)
