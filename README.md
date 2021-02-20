@@ -11,31 +11,20 @@
   一个轻量的基于B站API和Nodejs的B站观察者
 
 ## 特点
-
 1.  轻量
-
 2.  自定义程度高
-
 3.  模块化
-
 4.  ~~可并发~~ [在做了在做了(创建文件)]
 
 ## 依赖
-
 1.  Node.js
-
 2.  jq
-
 3.  一个能跑的系统
-
 4.  在电脑前坐着的你
-
 5.  网络
 
 ## 操作步骤&搭建步骤
-
 1.  安装依赖（以树莓派为例子，apt-get 或者 apt为包管理器的Linux系统）
-
 ```
 sudo apt-get update
 sudo apt-get install -y nodejs
@@ -43,9 +32,7 @@ sudo apt-get install -y jq
 sudo apt-get install -y git
 sudo apt-get install -y nano
 ```
-
 2.  Clone本项目
-
 ```
 mkdir workspace
 cd workspace
@@ -56,9 +43,7 @@ git clone https://github.com/NekokeCore/Nodejs-BiliBili-Watcher
 cd Nodejs-BiliBili-Watcher/Watcher/Kanasho
 npm install md5 --save
 ```
-
 4.  修改相关配置（本项目以叶笙为例子）
-
 ```
 nano Kanasho.sh
 # 修改 SESSDATA=XXXXXXXXXXXXXXXXXX 为你的账户 Cookie
@@ -69,7 +54,6 @@ nano Kanasho.sh
 ```
 
 ## 高级设置
-
 1.  客制化
 ```
 nano json.sh
