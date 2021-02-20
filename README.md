@@ -1,5 +1,7 @@
 # Nodejs-BiliBili-Watcher
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea38c58d1ad7423ba798de248482cfdf)](https://app.codacy.com/gh/NekokeCore/Nodejs-BiliBili-Watcher?utm_source=github.com&utm_medium=referral&utm_content=NekokeCore/Nodejs-BiliBili-Watcher&utm_campaign=Badge_Grade)
+
 ## 简介
   一个轻量的基于B站API和Nodejs的B站观察者
 
