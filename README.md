@@ -1,16 +1,17 @@
 # Nodejs-BiliBili-Watcher
 
-##  徽标
+## 徽标
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNekokeCore%2FNodejs-BiliBili-Watcher.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNekokeCore%2FNodejs-BiliBili-Watcher?ref=badge_shield)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a57845ed8b0b491ba08de7213124d076)](https://www.codacy.com/gh/NekokeCore/Nodejs-BiliBili-Watcher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NekokeCore/Nodejs-BiliBili-Watcher&amp;utm_campaign=Badge_Grade)
 ![Github](https://img.shields.io/github/last-commit/NekokeCore/Nodejs-BiliBili-Watcher)
 ![Github](https://img.shields.io/github/issues/NekokeCore/Nodejs-BiliBili-Watcher)
 [![](https://img.shields.io/badge/blog-@NekokeCore-blue.svg)](https://www.emtips.com)
 
-##  简介
+## 简介
   一个轻量的基于B站API和Nodejs的B站观察者
 
-##  特点
+## 特点
+
 1.  轻量
 
 2.  自定义程度高
@@ -19,7 +20,8 @@
 
 4.  ~~可并发~~ [在做了在做了(创建文件)]
 
-##  依赖
+## 依赖
+
 1.  Node.js
 
 2.  jq
@@ -30,7 +32,8 @@
 
 5.  网络
 
-##  操作步骤&搭建步骤
+## 操作步骤&搭建步骤
+
 1.  安装依赖（以树莓派为例子，apt-get 或者 apt为包管理器的Linux系统）
 
 ```
@@ -65,7 +68,8 @@ nano Kanasho.sh
 # 找到SESSDATA复制好后面的值，在Kanasho.sh对应的位置粘贴
 ```
 
-##  高级设置
+## 高级设置
+
 1.  客制化
 ```
 nano json.sh
@@ -128,7 +132,7 @@ echo "粉丝数:$fans"
 attention=$(cat $FILE_PATH | ${JQ_EXEC} .data.card.attention | sed 's/\"//g')
 echo "关注数:$attention"
 ```
-##  感谢
+## 感谢
 
 社会易姐QAQ的[B站API](https://github.com/SocialSisterYi/bilibili-API-collect)
 
