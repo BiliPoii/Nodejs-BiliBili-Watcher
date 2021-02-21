@@ -1,7 +1,6 @@
-#/bin/bash 
-echo "" > Kanasho.json
+#/bin/bash
 bash Kanasho.sh
 clear
-./json.sh Kanasho.json data.card.fans
-save=$(./json.sh Kanasho.json data.card.fans)
+bash json.sh Kanasho.json data.card.fans
+save=$(bash json.sh Kanasho.json data.card.fans)
 echo $save >> database.txt

@@ -1,14 +1,10 @@
-
 var fs = require('fs'),
     md5 = require('md5');
 var chrome="";
 var filePath="database.txt";
+var Web = require('./web.js');
 let preveMd5 = null
 // 创建事件处理程序
-//同步执行
-function tongbu(){
-var data =fs.readFileSync("database.txt");
-}
 //异步执行后回调
 function yibu(){
 fs.readFile("database.txt",function(err,date){
@@ -26,16 +22,14 @@ function watch(){
         if (currentMd5 == preveMd5) {
             return
         }
-        preveMd5 = currentMd5
-        console.log('[观察者-监测]文件已更新，文字流同步更新');
-        tongbu()
+        preveMd5 = currentMd5;
+        console.log('[观察者-监测]文件已更新，后端同步更新');
         yibu();
     });
 }
-tongbu();
 yibu();
 watch();
-console.log('[观察者-主进程]服务器正在创建');
+console.log('[观察者-主进程]文字流服务器正在创建');
 var http = require('http');
 http.createServer(function(request, response){
 // 发送 HTTP 头部
@@ -46,4 +40,5 @@ response.writeHead(200,{'Content-Type':'text/plain;charset=utf-8'});
 response.end(chrome);
 }).listen(8888);
 // 终端打印Log
-console.log('[观察者-主进程]服务器正在监听端口8888,请用浏览器访问http://<IP>:8888/');
+console.log('[观察者-主进程]文字流服务器正在监听端口8888,请用浏览器访问http://<IP>:8888/');
+Web.Web();
