@@ -41,7 +41,10 @@ git clone https://github.com/NekokeCore/Nodejs-BiliBili-Watcher
 3.  初始化项目
 ```
 cd Nodejs-BiliBili-Watcher/Watcher/Kanasho
+chmod -R 755 *
 npm install md5 --save
+npm install express --save
+npm install body-parser --save
 ```
 4.  修改相关配置（本项目以叶笙为例子）
 ```
