@@ -51,6 +51,11 @@ nano Kanasho.sh
 # 找到应用程序一项，找到Cookie，可能有两个随便哪一个都可以
 # 找到SESSDATA复制好后面的值，在Kanasho.sh对应的位置粘贴
 ```
+5.  启动服务
+```Bash
+nodejs main.js
+#当出现文字提示时说明启动成功
+```
 
 ## 自定义设置
 修改json.sh文件

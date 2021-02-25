@@ -1,4 +1,4 @@
-exports.Web = function Web(){
+exports.Web = function Web() {
   console.log('[观察者-主进程]网页服务器正在创建');
   var express = require('express');
   var fs = require('fs');
@@ -11,8 +11,8 @@ exports.Web = function Web(){
   app.use(express.static(path.resolve(__dirname, 'dist')));
   // 访问单页
   app.get('*', function (req, res) {
-  var html = fs.readFileSync(path.resolve(__dirname, 'dist/index.html'), 'utf-8');
-   res.send(html);
+    var html = fs.readFileSync(path.resolve(__dirname, 'dist/index.html'), 'utf-8');
+    res.send(html);
   });
   // 监听
   app.listen(8081, function () {
