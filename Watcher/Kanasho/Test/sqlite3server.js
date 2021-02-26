@@ -9,7 +9,7 @@ exports.sql = function sql() {
         DB.exist = fs.existsSync(file);
         if (!DB.exist) {
             console.log("[观察者-主进程]检测到数据库不存在，正在创建数据库.....");
-            fs.openSync(file, 'database');
+            fs.openSync(file, 'w');
             console.log("[观察者-主进程]创建数据库完毕");
         };
         console.log("[观察者-主进程]检测到数据存在，正在连接至数据库.....");
@@ -32,6 +32,7 @@ exports.sql = function sql() {
             });
         });
     };
+
     /// tilesData format; [[level, column, row, content], [level, column, row, content]]
     DB.SqliteDB.prototype.insertData = function (sql, objects) {
         DB.db.serialize(function () {
