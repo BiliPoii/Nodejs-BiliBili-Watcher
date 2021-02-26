@@ -1,71 +1,49 @@
-/// Import SqliteDB.
- 
-var SqliteDB = require('./sqlite3server.js').SqliteDB;
- 
- 
- 
-var file = "database.db";
- 
-var sqliteDB = new SqliteDB(file);
- 
- 
- 
-/// create table.
- 
-var createTileTableSql = "create table if not exists tiles(UID INTEGER, FANS INTEGER);";
- 
-var createLabelTableSql = "create table if not exists labels(UID INTEGER, FANS INTEGER);";
- 
-sqliteDB.createTable(createTileTableSql);
- 
-sqliteDB.createTable(createLabelTableSql);
- 
- 
- 
-/// insert data.
- 
-var tileData = [[1, 10, 10], [1, 11, 11], [1, 10, 9], [1, 11, 9]];
- 
-var insertTileSql = "insert into tiles(level, column, row) values(?, ?, ?)";
- 
-sqliteDB.insertData(insertTileSql, tileData);
- 
- 
- 
-/// query data.
- 
-var querySql = 'select * from tiles where level = 1 and column >= 10 and column <= 11 and row >= 10 and row <=11';
- 
-sqliteDB.queryData(querySql, dataDeal);
- 
- 
- 
-/// update data.
- 
-var updateSql = 'update tiles set level = 2 where level = 1 and column = 10 and row = 10';
- 
-sqliteDB.executeSql(updateSql);
- 
- 
- 
-/// query data after update.
- 
-querySql = "select * from tiles where level = 2";
- 
-sqliteDB.queryData(querySql, dataDeal);
- 
- 
- 
-sqliteDB.close();
- 
- 
- 
-function dataDeal(objects){
- 
-    for(var i = 0; i < objects.length; ++i){
- 
-        console.log(objects[i]);
- 
-    }
- 
+exports.sql = function sql() {
+    /// Import SqliteDB.
+
+    var SqliteDB = require('./sqlite3server.js').SqliteDB;
+
+
+
+    var file = "database.db";
+
+    var sqliteDB = new SqliteDB(file);
+
+
+
+    /// create table.
+
+    var createTileTableSql = "create table if not exists tiles(UID INTEGER, FANS INTEGER);";
+
+    var createLabelTableSql = "create table if not exists labels(UID INTEGER, FANS INTEGER);";
+
+    sqliteDB.createTable(createTileTableSql);
+
+    sqliteDB.createTable(createLabelTableSql);
+
+
+
+    /// insert data.
+
+    var tileData = [[1, 10], [1, 11]];
+
+    var insertTileSql = "insert into tiles(UID, FANS) values(?, ?)";
+
+    sqliteDB.insertData(insertTileSql, tileData);
+
+
+    sqliteDB.close();
+
+
+
+    function dataDeal(objects) {
+
+        for (var i = 0; i < objects.length; ++i) {
+
+            console.log(objects[i]);
+
+        }
+
+    }
+
 }
